@@ -1,0 +1,14 @@
+# DEVELOPMENT ONLY, DO NOT USE FOR PRODUCTION
+version: '3.5'
+
+services:
+  db:
+    image: cockroachdb/cockroach:latest
+    container_name: badaas-orm-db
+    ports:
+      - "26257:26257"
+      - "8080:8080" # Web based dashboard
+    command: start-single-node --insecure
+    environment:
+      - COCKROACH_USER=root
+      - COCKROACH_DATABASE=badaas_db
