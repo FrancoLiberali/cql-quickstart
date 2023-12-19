@@ -1,11 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
-	"github.com/ditrit/badaas-orm-example/standalone/models"
-	"github.com/ditrit/badaas/orm"
-	"github.com/ditrit/badaas/orm/logger"
+	"github.com/FrancoLiberali/cql"
+	"github.com/FrancoLiberali/cql-quickstart/models"
+	"github.com/FrancoLiberali/cql/logger"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -23,12 +24,17 @@ func main() {
 		panic(err)
 	}
 
-	log.Println("You are ready to do queries with orm.NewQuery[models.MyModel]")
+	log.Println("You are ready to do queries with cql.Query[models.MyModel]")
 }
 
 func NewDBConnection() (*gorm.DB, error) {
-	return orm.Open(
-		postgres.Open(orm.CreatePostgreSQLDSN("localhost", "root", "postgres", "disable", "badaas_db", 26257)),
+	return cql.Open(
+		postgres.Open(
+			fmt.Sprintf(
+				"user=%s password=%s host=%s port=%d sslmode=%s dbname=%s",
+				"root", "postgres", "localhost", 26257, "disable", "cql_db",
+			),
+		),
 		&gorm.Config{
 			Logger: logger.Default.ToLogMode(logger.Info),
 		},

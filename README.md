@@ -1,15 +1,15 @@
-# Quickstart for badaas-orm
+# CQL Quickstart
 
-In this quickstart you will see how to integrate badaas-orm within your project.
+In this quickstart you will see how to integrate cql within your project.
 
 ## Generate conditions
 
-First, you will need to generate the conditions for the models using `badaas-cli`.
+First, you will need to generate the conditions for the models using `cql-cli`.
 
-Install `badaas-cli`:
+Install `cql-cli`:
 
 ```bash
-go install github.com/ditrit/badaas-cli
+go install github.com/FrancoLiberali/cql/cql-cli
 ```
 
 Generate conditions:
@@ -18,7 +18,7 @@ Generate conditions:
 go generate ./...
 ```
 
-For details visit [badaas-cli docs](github.com/ditrit/badaas-cli/README.md).
+For details visit [cql-cli docs](github.com/FrancoLiberali/cql/cql-cli/README.md).
 
 ## Run it
 
@@ -42,10 +42,9 @@ main.go:30
 
 ...
 
-2023/08/16 10:36:28 You are ready to do queries with orm.NewQuery[models.MyModel]
+2023/08/16 10:36:28 You are ready to do queries with cql.Query[models.MyModel]
 ```
 
 ## Go deeper
 
-<!-- TODO add link to docs -->
-For more details, visit [badaas-orm docs](https://github.com/ditrit/badaas/orm/README.md).
+For more details, visit [cql docs](https://compiledquerylenguage.readthedocs.io/en/latest/).

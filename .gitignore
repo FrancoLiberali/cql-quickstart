@@ -28,6 +28,6 @@ _temp
 
 .cockroach-data
 
-# files generated with badaas-cli
+# files generated with cql-cli
 *_conditions.go
-**/badaas-orm.go
+**/cql.go
