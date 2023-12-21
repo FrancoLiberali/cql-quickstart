@@ -4,12 +4,12 @@ In this quickstart you will see how to integrate cql within your project.
 
 ## Generate conditions
 
-First, you will need to generate the conditions for the models using `cql-cli`.
+First, you will need to generate the conditions for the models using `cql-gen`.
 
-Install `cql-cli`:
+Install `cql-gen`:
 
 ```bash
-go install github.com/FrancoLiberali/cql/cql-cli
+go install github.com/FrancoLiberali/cql/cql-gen
 ```
 
 Generate conditions:
@@ -18,7 +18,7 @@ Generate conditions:
 go generate ./...
 ```
 
-For details visit [cql-cli docs](github.com/FrancoLiberali/cql/cql-cli/README.md).
+For details visit [cql-gen docs](github.com/FrancoLiberali/cql/cql-gen/README.md).
 
 ## Run it
 

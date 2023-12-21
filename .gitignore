@@ -28,6 +28,6 @@ _temp
 
 .cockroach-data
 
-# files generated with cql-cli
+# files generated with cql-gen
 *_conditions.go
 **/cql.go
