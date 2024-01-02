@@ -9,7 +9,7 @@ First, you will need to generate the conditions for the models using `cql-gen`.
 Install `cql-gen`:
 
 ```bash
-go install github.com/FrancoLiberali/cql/cql-gen
+go install github.com/FrancoLiberali/cql/cql-gen@latest
 ```
 
 Generate conditions:
