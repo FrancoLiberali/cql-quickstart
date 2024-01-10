@@ -31,3 +31,4 @@ _temp
 # files generated with cql-gen
 *_conditions.go
 **/cql.go
+!conditions/cql.go

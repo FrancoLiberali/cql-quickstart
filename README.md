@@ -18,23 +18,17 @@ Generate conditions:
 go generate ./...
 ```
 
-For details visit [cql-gen docs](github.com/FrancoLiberali/cql/cql-gen/README.md).
+For details visit [cql-gen docs](https://compiledquerylenguage.readthedocs.io/en/latest/cql/cqlgen.html).
 
 ## Run it
 
-First, we need a database to store the data, in this case we will use CockroachDB:
-
-```bash
-docker compose up -d
-```
-
-After that, we can run the application:
+We can run the application:
 
 ```bash
 go run .
 ```
 
-And you should see something like:
+It will create an SQLite database and you should see something like:
 
 ```bash
 main.go:30
