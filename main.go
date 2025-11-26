@@ -7,16 +7,15 @@ import (
 	"github.com/FrancoLiberali/cql-quickstart/models"
 	"github.com/FrancoLiberali/cql/logger"
 	"gorm.io/driver/sqlite"
-	"gorm.io/gorm"
 )
 
 func main() {
-	gormDB, err := NewDBConnection()
+	db, err := NewDBConnection()
 	if err != nil {
 		panic(err)
 	}
 
-	err = gormDB.AutoMigrate(
+	err = db.GormDB.AutoMigrate(
 		models.MyModel{},
 	)
 	if err != nil {
@@ -26,10 +25,10 @@ func main() {
 	log.Println("You are ready to do queries with cql.Query[models.MyModel]")
 }
 
-func NewDBConnection() (*gorm.DB, error) {
+func NewDBConnection() (*cql.DB, error) {
 	return cql.Open(
 		sqlite.Open("sqlite:db"),
-		&gorm.Config{
+		&cql.Config{
 			Logger: logger.Default.ToLogMode(logger.Info),
 		},
 	)
