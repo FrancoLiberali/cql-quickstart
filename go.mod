@@ -3,7 +3,7 @@ module github.com/FrancoLiberali/cql-quickstart
 go 1.22.0
 
 require (
-	github.com/FrancoLiberali/cql v0.7.2-0.20260910145742-eaa0c8857f60
+	github.com/FrancoLiberali/cql v0.8.0
 	gorm.io/driver/sqlite v1.6.0
 )
 
