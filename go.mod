@@ -18,4 +18,4 @@ require (
 	gorm.io/gorm v1.30.0 // indirect
 )
 
-replace gorm.io/gorm => github.com/FrancoLiberali/gorm v0.0.0-20260910151127-6423c4bdd440
+replace gorm.io/gorm => github.com/FrancoLiberali/gorm v1.31.3
